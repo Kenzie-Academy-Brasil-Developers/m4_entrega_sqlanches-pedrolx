@@ -24,19 +24,19 @@ INSERT INTO produtos_pedidos
 VALUES
 ((SELECT pedidos.id FROM clientes 
 JOIN pedidos ON pedidos.cliente_id = clientes.id
-WHERE clientes.nome = 'Georgia'), 1),
+WHERE clientes.nome = 'Georgia'), (SELECT produtos.id FROM produtos WHERE produtos.nome = 'Big Serial')),
 ((SELECT pedidos.id FROM clientes 
 JOIN pedidos ON pedidos.cliente_id = clientes.id
-WHERE clientes.nome = 'Georgia'), 2),
+WHERE clientes.nome = 'Georgia'), (SELECT produtos.id FROM produtos WHERE produtos.nome = 'Varchapa')),
 ((SELECT pedidos.id FROM clientes 
 JOIN pedidos ON pedidos.cliente_id = clientes.id
-WHERE clientes.nome = 'Georgia'), 1),
+WHERE clientes.nome = 'Georgia'), (SELECT produtos.id FROM produtos WHERE produtos.nome = 'Fritas')),
 ((SELECT pedidos.id FROM clientes 
 JOIN pedidos ON pedidos.cliente_id = clientes.id
-WHERE clientes.nome = 'Georgia'), 6),
+WHERE clientes.nome = 'Georgia'), (SELECT produtos.id FROM produtos WHERE produtos.nome = 'Coca-Cola')),
 ((SELECT pedidos.id FROM clientes 
 JOIN pedidos ON pedidos.cliente_id = clientes.id
-WHERE clientes.nome = 'Georgia'), 8);
+WHERE clientes.nome = 'Georgia'), (SELECT produtos.id FROM produtos WHERE produtos.nome = 'Coca-Cola'));
 
 -- Leitura
 
